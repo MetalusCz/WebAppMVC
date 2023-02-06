@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Subject>
+@foreach (var subject in Model) {
+    <div class="border border-1 border-dark m-2 p-2 rounded-3 bg-secondary text-light">
+        <h6>@subject.Name</h6>
+        <a class="btn btn-warning" asp-action="Edit" asp-route-id=@subject.Id>Edit</a>
+        <a class="btn btn-danger" asp-action="Delete" asp-route-id=@subject.Id>Delete</a>
+    </div>
+}
+<div class="justify-content-center m-2">
+    <a class="btn btn-primary" asp-action="Create">Create</a>
+</div>
